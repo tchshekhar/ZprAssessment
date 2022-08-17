@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9575CD"
+    tools:context=".view.ui.NewsDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/media_image"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toTopOf="@id/topGuideLine" />
+
+        <TextView
+            android:id="@+id/txt_publisher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAllCaps="true"
+            android:textColor="#FF9800"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_text" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/txt_publisher" />
+
+        <TextView
+            android:id="@+id/subtitle_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/media_image" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
